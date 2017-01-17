@@ -31,12 +31,20 @@ article.item.read-full .item-body:after {
         transition: background 0.4s ease-in-out, border-bottom 1.6s ease-in-out;
 }
 
-
+.navbar-default .nav > li > a{
+    color:#d78b2e;
+    font-size:1.2em;
+    border:1px solid transparent;
+    border-radius:4px;
+}
 .homepage.top-nav-collapse {
     background-color: #eeeaea;
     border-bottom: 1px solid #ddd;
 }
 
+.navbar-collapse.collapse.in, .navbar-collapse.collapsing {
+  clear: both;
+}
 .dropdown-menu > li {
     margin: 5px 0px;
 }
@@ -51,9 +59,15 @@ article.item.read-full .item-body:after {
     border: 1px solid transparent;
 }
 
+ #cartbox {
+    left: -195px;
+    right: 0;
+}
+
 #loginbox, #cartbox {
     min-width: 300px;
     border-top-left-radius: 4px;
+    right: 0;
 }
 
 #cartbox p {
@@ -312,7 +326,7 @@ article.item.read-full .item-body:after {
     text-align: center;
     margin-right: 0;
     padding: 0;
-    width: 21%;
+    /* width: 21%; */
 }
 
 .cocreate .co-icons .icon {

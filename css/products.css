@@ -35,18 +35,18 @@ section.sky-form.agent {
     height: 85px; width: auto;margin-top: -80px;
 }
 .filters {
-    position: fixed;
-    width: 85%;
+    position: absolute;
+    width: 94%;
     z-index: 4;
     background-color: #fff;
 }
 .filterOptions {
     display: none;
-    padding: 0em 1em;
+    padding: 1.2em 1em;
 }
 .filtertags {border-top: 1px solid #8e5918;margin-top: 5px;}
  .filterpanel section {
-        width: 20%;
+        /* width: 20%; */
     }
 
 .filterpanel a{
@@ -68,7 +68,7 @@ content: "\f147";
         width: 56%;
     }
     .filters {
-            top:53px;
+            /* top:53px; */
         }
 
     select.ng-pristine.ng-untouched.ng-valid.ng-not-empty {
@@ -82,7 +82,7 @@ content: "\f147";
         width: 51%;
     }
     .filters {
-        top:53px;
+        /* top:53px; */
     }
 
     select.ng-pristine.ng-untouched.ng-valid.ng-not-empty {
@@ -96,7 +96,7 @@ content: "\f147";
         width: 60%;
     }
     .filters {
-        top:53px;
+        /* top:53px; */
     }
 
     select.ng-pristine.ng-untouched.ng-valid.ng-not-empty {

@@ -349,6 +349,14 @@ i.fa.fa-plus.placeholdit {
   overflow: hidden;
 }
 
+.customize_banner.mob {
+	height: 400px;
+	padding-right: 0px;
+	/* border: 1px solid red; */
+}
+.customize_banner.mob select {
+    margin-bottom: 10px;
+}
 
 
 .scrollarea {
@@ -359,6 +367,9 @@ i.fa.fa-plus.placeholdit {
   /* padding-bottom: 10px; */
 }
 
+.scrollarea.mob {
+	height: 250px;
+}
 .scrollarea.loader {
 	text-align: center;
 	padding-top: 13%;
@@ -384,13 +395,16 @@ i.fa.fa-plus.placeholdit {
 }
 
 
+.customcontrols.mob .custombuttons {
+	padding: 0.2em;
+}
 
 .custombuttons {
   padding: 1em 3em;
 }
 
 .custombuttons .btn {
-  font-size: 1vw;
+  font-size: 12px;
 }
 
 .custombuttons  .nextbtn {
@@ -418,6 +432,12 @@ i.fa.fa-plus.placeholdit {
 .designDiv {
   position: relative;
 }
+
+.product-grid.elem.mob:hover {
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
 
 .product-grid.elem:hover {
     box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -449,6 +469,10 @@ i.fa.fa-plus.placeholdit {
   border: 1px solid black;
 }
 
+  .product-grid.elem.mob {
+  	width: 80px;
+  	height: 55px;
+  }
 
   .product-grid.elem {
      width: 110px;
@@ -456,6 +480,16 @@ i.fa.fa-plus.placeholdit {
      position: relative;
      float:left;
      margin-top: 5px;
+  }
+
+  .product-grid.elem.mob .product-img {
+  	padding: 0.1em;
+  	line-height: 40px;
+  }
+
+.imgoptionsmob {
+    min-height: 65px;
+    /* border: 1px solid red; */
   }
 
   .product-img {
@@ -466,6 +500,9 @@ i.fa.fa-plus.placeholdit {
         line-height: 80px;
   }
 
+  .product-grid.elem.mob .product-img img {
+  	max-height: 30px;
+  }
   .product-grid.elem .product-img img {
     padding: 0em;
     cursor: pointer;
@@ -481,6 +518,12 @@ i.fa.fa-plus.placeholdit {
   /* border: 1px solid red; */
  }
 
+ .previewParent.mob {
+ 	height: 300px;
+ 	overflow: hidden;
+ }
+
+ .previewParent.mob .previewbox {left: 178px;top: 125px;}
 
 .previewbox {
 	position: absolute;
@@ -499,6 +542,14 @@ i.fa.fa-plus.placeholdit {
   left: -30px;
   top: -62px;
 }
+
+.previewParent.mob img.ear.mob {
+  height: 175%;
+  position: absolute;
+  width: auto;
+  left: -35px;
+  top: -62px;
+}
 .triangle-right {
 	    position: relative;
 	    padding: 10px;
@@ -509,6 +560,11 @@ i.fa.fa-plus.placeholdit {
 	    -webkit-border-radius: 10px;
 	    -moz-border-radius: 10px;
 	    border-radius: 10px;
+}
+
+.mob #imgOptions {
+	max-width: 100%;
+
 }
 
 #imgOptions{
@@ -540,13 +596,19 @@ i.fa.fa-plus.placeholdit {
 }
 
 .felements img,  .aelements  img{max-height: 50px;width:  auto;margin: 10px 15px;}
-
+.felements.mob img, .aelements.mob img {
+    max-height: 25px;
+    margin: 5px 8px;
+}
 .customcontrols {
   height: 130px;
   position: relative;
   /* border: 1px solid; */
 }
 
+.customcontrols.mob {
+	height: auto;
+}
 .design .details {
   display: flex;
 }

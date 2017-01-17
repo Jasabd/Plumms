@@ -164,22 +164,102 @@ src="https://www.facebook.com/tr?id=1301877609834122&ev=PageView&noscript=1"
       <!--header-->
       <!-- <div class="header"> -->
          <!-- <div class="container"> -->
-         <nav class="navbar navbar-default navbar-fixed-top <?php if($currenttab == 'home' || $currenttab == 'designearrings') { echo 'homepage'; } ?>" role="navigation">
-            <div class="container">
-              <div class="navbar-header">
-                <a href="index.php" class="navbar-brand"><img src="images/logo_dark.png"  class="img-responsive"/></a>
-                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                 <span class="sr-only">Toggle navigation</span>
-                 <span class="icon-bar"></span>
-                 <span class="icon-bar"></span>
-                 <span class="icon-bar"></span>
-                 </button>
+    <nav role="navigation" class="navbar navbar-default navbar-fixed-top <?php if($currenttab == 'home' || $currenttab == 'designearrings') { echo 'homepage'; } ?>" role="navigation"">
+      <div class="container">
 
-              </div>
-              <!--navbar-header-->
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                 <ul class="nav navbar-nav">
-                    <li>
+        <!-- Title -->
+        <div class="navbar-header pull-left">
+          <a href="index.php" class="navbar-brand"><img src="images/logo_dark.png"  class="img-responsive"/></a>
+
+          <!-- Required bootstrap placeholder for the collapsed menu -->
+          <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        </div>
+
+        <!-- 'Sticky' (non-collapsing) right-side menu item(s) -->
+        <div class="navbar-header pull-right">
+          <ul class="nav pull-left">
+            <li class="dropdown grid pull-left">
+               <a class="cart dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-shopping-bag fa-fw"></i><span id="badge" class="badge">0</span></a>
+                <div class="dropdown-menu cart-box" id="cartbox" style="padding: 15px; padding-bottom: 0px;">
+                   <p><span>Your Total</span>
+                   <span class="simpleCart_total">  <i class="fa fa-inr"></i> 0.00 </span>
+                    </p>
+                    <hr>
+                    <p> <span class="simpleCart_quantity"> 0 </span>
+                    <span class="cartbtn"><a class="btn btn-primary" href="index.php?checkout">View cart</a></span>
+                    </p>
+                </div>
+              </li>
+              <li class="dropdown grid pull-right">
+                <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+                <div class="dropdown-menu" id="loginbox" style="padding: 15px; padding-bottom: 0px;">
+                 <form  id="loginForm" name="loginForm" role="form" <?php  if(isset($_SESSION["useremail"])) echo "style='display:none;'" ?>>
+                   <div class="alert alert-danger hide" id="loginFailedMsg" role="alert"> Login Failed! Please try again</div>
+                   <div class="alert alert-danger hide" id="systemErrorMsg" role="alert"> System Failure! please try later.</div>
+                   <div class="alert alert-danger hide" id="forgotpwdMessage" role="alert"> Please provide yor email address, you will recieve an email with your password.</div>
+                   <div class="alert alert-danger hide" id="fgtPwdMsg" role="alert">We have sent you an Email with password.</div>
+
+                   <fieldset id="loginform">
+                      <div class="form-group">
+                         <label for="email">Email Address</label>
+                         <input class="form-control" placeholder="Email Address" name="email" type="email" id="emailAddr" autofocus>
+                      </div>
+                      <div class="form-group">
+                         <label for="password" id="pwdLabel">Password</label>
+                         <input class="form-control" placeholder="Password" name="pass" type="password" value="" id="pwd">
+                      </div>
+                      <input type="submit" class="btn btn-primary" id="login" value="Login" name="login" />
+                      <span><a href="javascript:void(0);" id="fgtpwd">Forgot your password?</a></span>
+                   </fieldset>
+                   <p>New User ? <a class="sign" href="index.php?register">Sign Up</a>
+                   </p>
+                  </form>
+                  <div class="userprofile"  <?php  if(!isset($_SESSION["useremail"])) echo "style='display:none;'" ?>>
+                     <ul class="list-group dropdown-user" id="userList" style="display:block">
+                        <li class="list-group-item">
+                           <span class="username">
+                                <?php  if(isset($_SESSION["useremail"])) echo $_SESSION["useremail"]; ?>
+                           </span> &nbsp;&nbsp;
+                           <span class="logout">
+                           <a href="index.php?logout"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+                           </span>
+                        </li>
+                        <li class="list-group-item"><a href="index.php?myaccount=profile"><i class="fa fa-user fa-fw"></i>My Account</a>
+                        </li>
+                        <li class="list-group-item"><a href="index.php?myaccount=custom"><i class="fa fa-picture-o"></i> My Designs</a>
+
+                        <li class="list-group-item"><a href="index.php?myaccount=orders"><i class="fa fa-shopping-bag fa-fw"></i> My Orders</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="submitForm" style="display:none">
+                    <form  id="submitForm" name="submitForm" role="form" style="display:none;">
+                       <div class="alert alert-danger hide" id="forgotpwdMessage" role="alert"> Please provide yor email address, you will recieve an email with your password.</div>
+                       <div class="alert alert-danger hide" id="fgtPwdMsg" role="alert">We have sent you an Email with password.</div>
+                       <div class="alert alert-danger hide" id="errorMsg" role="alert">Some Error</div>
+                       <fieldset id="submitfield">
+                          <div class="form-group">
+                             <label for="email">Email Address</label><br/>
+                             <input class="form-control" placeholder="Email Address" name="email" type="email" id="emailAddr" autofocus>
+                          </div>
+                          <input type="submit" class="btn btn-primary" id="submitEmail" value="Submit" name="submitEmail">
+                          <span><a href="javascript:void(0);" id="fgtcancel">cancel</a></span>
+                       </fieldset>
+                    </form> <br>
+                  </div>
+
+                </div>
+              </li>
+          </ul>
+
+
+        </div>
+
+        <!-- The Collapsing items            navbar-left or navbar-right -->
+        <div class="collapse navbar-collapse navbar-left">
+          <!-- pull-right keeps the drop-down in line -->
+          <ul class="nav navbar-nav">
+                               <li>
                        <a href="index.php" <?php if($currenttab == "home") echo 'class="active"'; ?>>
                           Fitoori <!-- <img src="images/home.png"/> -->
                        </a>
@@ -212,87 +292,12 @@ src="https://www.facebook.com/tr?id=1301877609834122&ev=PageView&noscript=1"
                           Blog <!-- <img src="images/home.png"/> -->
                        </a>
                     </li>
-                 </ul>
+          </ul>
+        </div>
 
-                   <ul class="nav navbar-nav navbar-right">
-                      <li class="dropdown grid">
-                       <a class="cart dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-shopping-bag fa-fw"></i><span id="badge" class="badge">0</span></a>
-                        <div class="dropdown-menu cart-box" id="cartbox" style="padding: 15px; padding-bottom: 0px;">
-                           <p><span>Your Total</span>
-                           <span class="simpleCart_total">  <i class="fa fa-inr"></i> 0.00 </span>
-                            </p>
-                            <hr>
-                            <p> <span class="simpleCart_quantity"> 0 </span>
-                            <span class="cartbtn"><a class="btn btn-primary" href="index.php?checkout">View cart</a></span>
-                            </p>
-                        </div>
-                      </li>
-                      <li class="dropdown grid">
-                        <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
-                        <div class="dropdown-menu" id="loginbox" style="padding: 15px; padding-bottom: 0px;">
-                         <form  id="loginForm" name="loginForm" role="form" <?php  if(isset($_SESSION["useremail"])) echo "style='display:none;'" ?>>
-                           <div class="alert alert-danger hide" id="loginFailedMsg" role="alert"> Login Failed! Please try again</div>
-                           <div class="alert alert-danger hide" id="systemErrorMsg" role="alert"> System Failure! please try later.</div>
-                           <div class="alert alert-danger hide" id="forgotpwdMessage" role="alert"> Please provide yor email address, you will recieve an email with your password.</div>
-                           <div class="alert alert-danger hide" id="fgtPwdMsg" role="alert">We have sent you an Email with password.</div>
+      </div>
+    </nav>
 
-                           <fieldset id="loginform">
-                              <div class="form-group">
-                                 <label for="email">Email Address</label>
-                                 <input class="form-control" placeholder="Email Address" name="email" type="email" id="emailAddr" autofocus>
-                              </div>
-                              <div class="form-group">
-                                 <label for="password" id="pwdLabel">Password</label>
-                                 <input class="form-control" placeholder="Password" name="pass" type="password" value="" id="pwd">
-                              </div>
-                              <input type="submit" class="btn btn-primary" id="login" value="Login" name="login" />
-                              <span><a href="javascript:void(0);" id="fgtpwd">Forgot your password?</a></span>
-                           </fieldset>
-                           <p>New User ? <a class="sign" href="index.php?register">Sign Up</a>
-                           </p>
-                        </form>
-                    <div class="userprofile"  <?php  if(!isset($_SESSION["useremail"])) echo "style='display:none;'" ?>>
-                       <ul class="list-group dropdown-user" id="userList" style="display:block">
-                          <li class="list-group-item">
-                             <span class="username">
-                                  <?php  if(isset($_SESSION["useremail"])) echo $_SESSION["useremail"]; ?>
-                             </span> &nbsp;&nbsp;
-                             <span class="logout">
-                             <a href="index.php?logout"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
-                             </span>
-                          </li>
-                          <li class="list-group-item"><a href="index.php?myaccount=profile"><i class="fa fa-user fa-fw"></i>My Account</a>
-                          </li>
-                          <li class="list-group-item"><a href="index.php?myaccount=custom"><i class="fa fa-picture-o"></i> My Designs</a>
-
-                          <li class="list-group-item"><a href="index.php?myaccount=orders"><i class="fa fa-shopping-bag fa-fw"></i> My Orders</a>
-                          </li>
-                       </ul>
-                    </div>
-                    <div class="submitForm" style="display:none">
-                      <form  id="submitForm" name="submitForm" role="form" style="display:none;">
-                         <div class="alert alert-danger hide" id="forgotpwdMessage" role="alert"> Please provide yor email address, you will recieve an email with your password.</div>
-                         <div class="alert alert-danger hide" id="fgtPwdMsg" role="alert">We have sent you an Email with password.</div>
-                         <div class="alert alert-danger hide" id="errorMsg" role="alert">Some Error</div>
-                         <fieldset id="submitfield">
-                            <div class="form-group">
-                               <label for="email">Email Address</label><br/>
-                               <input class="form-control" placeholder="Email Address" name="email" type="email" id="emailAddr" autofocus>
-                            </div>
-                            <input type="submit" class="btn btn-primary" id="submitEmail" value="Submit" name="submitEmail">
-                            <span><a href="javascript:void(0);" id="fgtcancel">cancel</a></span>
-                         </fieldset>
-                      </form> <br>
-                    </div>
-
-                        </div>
-                      </li>
-                    </ul>
-                 <!--/.navbar-collapse-->
-              </div>
-              <!--//navbar-header-->
-            </div>
-         </nav>
 
          <!-- </div> -->
       <!-- </div> -->

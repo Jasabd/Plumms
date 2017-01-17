@@ -68,6 +68,8 @@ des.controller('MainController', ['$scope', '$rootScope', '$http', '$window', '$
                 // setHeight: 4,
                 scrollInertia: 0
         };
+
+
       //   $scope.updateScrollbar = function ('scrollTo', 0);
 
 
