@@ -79,7 +79,7 @@
                </table>
             </div>
 
-<?php if(count($cartItems) > 0)  { ?>
+<!-- <?php if(count($cartItems) > 0)  { ?>
             <div class="panel-body">
                   <h3>You May Also Like</h3>
                   <div class="products cartpage">
@@ -107,7 +107,7 @@
                     <?php } ?>
                   </div>
             </div>
-          <?php } ?>
+          <?php } ?> -->
          </div>
       </div> <!-- end of cart items -->
         <div id="cart-cost" class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -190,6 +190,41 @@
 
 
 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12 cart-suggestions">
+          <?php if(count($cartItems) > 0)  { ?>
+            <div class="panel-body">
+                  <h3>You May Also Like</h3>  
+                  <div class="products cartpage">
+
+                  <?php
+                    foreach($relatedPrd as $rprod) {
+                      $customImg = "";
+                      /* if($rprod['customized'] == 1) {
+                        $customImg = "style='padding-left: 0px;'";
+                      } */
+                  ?><div class="col-sm-6 col-xs-12">
+                    <div class="product-card" >
+                        <div class="product-image" <?php echo $customImg; ?>>
+                          <a href="<?php echo SITE_URL; ?>index.php?single&id=<?php echo $rprod['productid']; ?>">
+                            <img class="shadowed" src="<?php echo  SITE_URL.PRDIMGDIR."/".$rprod['mainimg'];  ?>" alt="" />
+                          </a>
+                        </div>
+                         <div class="product-info">
+                           <div class="details">
+                            <p class="pr-name"><?php echo $rprod['name'];  ?></p>
+                            <p class="pr-price"> <i class="fa fa-inr"></i> <?php echo round($rprod['price']);  ?></p>
+                           </div>
+                         </div>
+                      </div>
+                      </div>
+                    <?php } ?>
+                  </div>
+                  
+            </div>
+          <?php } ?>
         </div>
    </div>
 </div>

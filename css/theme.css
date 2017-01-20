@@ -1185,7 +1185,7 @@ fieldset[disabled] .btn-default:focus,
 .btn-default[disabled].focus,
 fieldset[disabled] .btn-default.focus{background-color:#ffffff;border-color:#cccccc;}
 .btn-default .badge{color:#ffffff;background-color:#333333;}
-.btn-primary{color:#fff;background-color:#8e5918;border-color:#8e5918;}
+.btn-primary{color:#fff;background-color:#8e5918;border-color:#8e5918;font-size:16px;}
 .btn-primary:focus,
 .btn-primary.focus{color:#ffffff;background-color:#623e11;border-color:#0b0702;}
 .btn-primary:hover{color:#ffffff;background-color:#623e11;border-color:#442b0b;}
@@ -2492,5 +2492,5 @@ td.visible-print{display:table-cell !important;}
 @media print{.hidden-print{display:none !important;}
 }
 
-@media (max-width:480px){.btn-primary{font-size: 12px;}
+@media (max-width:480px){.btn-primary{font-size: 14px;}
 }

@@ -614,3 +614,8 @@ div#Orderpage h2 {
   padding-left: 14px;
   text-decoration: underline;
 }
+
+/* --- 20/1/17 ---*/
+.cart-suggestions h3 {
+  color: #8e5918;
+}
