@@ -33,3 +33,19 @@
   padding: 4.6em;
   height: 480px;
 }
+
+/*@media (max-width:480px) {
+  .imagezoom-view {
+    position: absolute;
+    left: 113px !important;
+    top: 306.797px !important;
+    background: transparent !important;
+  }
+  .imagezoom-view img {
+    position: absolute;
+    width: 190.575px;
+    /* height: 154px; 
+    top: -2.73559e-14px;
+    left: 5.47118e-14px;
+  }
+}*/

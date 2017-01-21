@@ -2,7 +2,7 @@
      .flex-viewport {
     }
     .flex-control-thumbs {
-        width: 22% !important;
+        width: 21% !important;
     }
     .nav-tabs > li {
         font-size: 14px;
@@ -15,7 +15,7 @@
         height: 198.8px !important;
     }
     .thumb-image {
-        padding: 2.6em;
+        padding: 2.6em !important;
     }
     .nav-tabs > li {
         font-size: 14px;
@@ -25,5 +25,11 @@
     }
     .nav > li > a{
         padding: 10px 6px;
+    }
+}
+
+@media (max-width: 768px) {
+    .thumb-image {
+        padding: 4.6em 0;
     }
 }

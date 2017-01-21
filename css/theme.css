@@ -1156,7 +1156,7 @@ select[multiple].input-lg{height:auto;}
 fieldset[disabled] .btn{cursor:not-allowed;opacity:0.65;filter:alpha(opacity=65);-webkit-box-shadow:none;box-shadow:none;}
 a.btn.disabled,
 fieldset[disabled] a.btn{pointer-events:none;}
-.btn-default{color:#333333;background-color:#ffffff;border-color:#cccccc;}
+.btn-default{color:#333333;background-color:#ffffff;border-color:#cccccc;font-size: 16px}
 .btn-default:focus,
 .btn-default.focus{color:#333333;background-color:#e6e6e6;border-color:#8c8c8c;}
 .btn-default:hover{color:#333333;background-color:#e6e6e6;border-color:#adadad;}

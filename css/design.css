@@ -350,12 +350,16 @@ i.fa.fa-plus.placeholdit {
 }
 
 .customize_banner.mob {
-	height: 400px;
+	height: 350px;
 	padding-right: 0px;
 	/* border: 1px solid red; */
 }
 .customize_banner.mob select {
     margin-bottom: 10px;
+    position: relative;
+    left: 0;
+    top: 45px;
+    z-index: 100;
 }
 
 
@@ -519,11 +523,11 @@ i.fa.fa-plus.placeholdit {
  }
 
  .previewParent.mob {
- 	height: 300px;
- 	overflow: hidden;
+ 	height: 350px;
+ 	overflow-y: scroll;
  }
 
- .previewParent.mob .previewbox {left: 178px;top: 125px;}
+ .previewParent.mob .previewbox {left: 215px;top: 125px;}
 
 .previewbox {
 	position: absolute;
@@ -548,7 +552,7 @@ i.fa.fa-plus.placeholdit {
   position: absolute;
   width: auto;
   left: -35px;
-  top: -62px;
+  top: -100px;
 }
 .triangle-right {
 	    position: relative;

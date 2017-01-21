@@ -135,7 +135,9 @@ article.item.read-full .item-body:after {
 .pageContainer {
     padding-top: 70px;
 }
-
+.col-xs-12.customize_banner.mob .pageContainer {
+    padding-top: 20px;
+}
 .dropdown-menu .list img {
     width: 28px;
     background-color: #8e5918;
@@ -385,14 +387,14 @@ article.item.read-full .item-body:after {
 
 .product-card {
     flex: 0 1 20%;
-    margin: 6px 40px 14px 0px;
+    /*margin: 6px 40px 14px 0px;*/
     border: 1px solid #f9f9f9;
     background-color: #FFF;
     border-radius: 8px;
 }
 
 .products.search .product-card {
-    margin: 6px 50px 14px 0px;
+    margin: 15px 10px;
 }
 
 .product-card .btn {padding: 2px 6px;margin-top: 6px;}
