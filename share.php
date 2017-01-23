@@ -4,7 +4,7 @@
 
 <!DOCTYPE html>
 <head>
-          <meta property="fb:app_id"        content="1076977995697955" />
+          <meta property="fb:app_id"  content="236903216763385" />
      <!-- This url should be the same as the href you passed in to showDialog -->
      <meta property="og:url" content="<?= "http://". $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>" />
 

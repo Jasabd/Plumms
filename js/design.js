@@ -787,7 +787,7 @@ function openfb() {
       name: "My Fitoori Design",
       picture: imgurl,
       description: "Designed on Fitoori.com!",
-      app_id: 1076977995697955
+      app_id: 236903216763385
     }, function(response){
     if (response && !response.error_code) {
         console.log("OK: "+JSON.stringify(response));
