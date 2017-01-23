@@ -136,7 +136,7 @@ article.item.read-full .item-body:after {
     padding-top: 70px;
 }
 .col-xs-12.customize_banner.mob .pageContainer {
-    padding-top: 20px;
+    padding-top: 0px;
 }
 .dropdown-menu .list img {
     width: 28px;
@@ -738,4 +738,20 @@ article.item.read-full .item-body:after {
     span.arrow {
         display: none;
     }
+}
+
+.mobBannerVideo {
+    display: none;
+}
+
+/*@media (max-width:480px) {
+    .banner_content h3,.banner_content button {
+        display: none;
+    }
+    .mobBannerVideo {
+    display: block;
+}
+}*/
+.tagLine {
+    line-height: 1.3em;
 }

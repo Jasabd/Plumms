@@ -129,8 +129,8 @@
                         <div class="product-grid elem" ng-repeat="imgElem in piecesElm = filteredSet | orderBy:'-priority'" ng-click="selectImage(imgElem,  true);">
                             <img ng-if="imgElem.images.length >0"  align="right" ng-src="{{siteUrl}}images/paint-board-and-brush.svg" alt="">
                             <div class="product-img">
-                                <img ng-if="imgElem.style.indexOf('hook') > -1" ng-src="{{siteUrl}}productImages/{{imgElem.hookImg}}" alt="" />
-                                <img ng-if="imgElem.style.indexOf('hook') <= -1" ng-src="{{siteUrl}}productImages/{{imgElem.carouselImg}}" alt="" />
+                                <img class="scrlTop" ng-if="imgElem.style.indexOf('hook') > -1" ng-src="{{siteUrl}}productImages/{{imgElem.hookImg}}" alt="" />
+                                <img class="scrlTop" ng-if="imgElem.style.indexOf('hook') <= -1" ng-src="{{siteUrl}}productImages/{{imgElem.carouselImg}}" alt="" />
 
                             </div>
                         </div>
@@ -312,3 +312,16 @@
 
   </div>
 </div>
+<script>
+  $(document).ready(function() {
+
+    $('div.product-img img').on("click",function(){
+      $(window).scrollTop(0);
+    });
+
+    $('product-grid').on("click",function(){
+      $(window).scrollTop(0);
+    });
+
+});
+</script>
