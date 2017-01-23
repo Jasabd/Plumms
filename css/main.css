@@ -744,14 +744,6 @@ article.item.read-full .item-body:after {
     display: none;
 }
 
-/*@media (max-width:480px) {
-    .banner_content h3,.banner_content button {
-        display: none;
-    }
-    .mobBannerVideo {
-    display: block;
-}
-}*/
 .tagLine {
     line-height: 1.3em;
 }
