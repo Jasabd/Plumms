@@ -124,8 +124,9 @@
                      </tr>
                      <tr>
                         <th>Cart - Total</th>
-                        <td>:  <i class="fa fa-inr"></i> <span id="subTotal"><?php echo money_format('%!i',round($cartTotal)); ?></span></td>
+                        <td>:  <i class="fa fa-inr"></i> <span id="subTotal"><?php echo money_format('%!i',round($cartTotal)); ?></span><br></td>                        
                      </tr>
+                     <tr><span style="font-size: 12px">All inclusive (Shipping & taxes)</span></tr>
                   </table>
                </div>
                <span>Estimated time of delivery :  7 - 10 business days </span>
@@ -181,7 +182,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading"> Checkout  </div>
                 <div class="panel-body amzcheckout">
-                      <p>Checking out as <?php echo $checkoutemail; ?>. you will be taken to Amazon website to complete the checkout.</p>
+                      <p>Checking out as <?php echo $checkoutemail; ?>. Click on the button below to complete your purchase. There will be no additional charges and your total price will remain the same.</p>
                       <center><?php echo $cartHtml; ?> </center>
                 </div>
               </div>
