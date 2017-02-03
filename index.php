@@ -145,7 +145,9 @@ if(isset($_SESSION['orderStatus'])  && $_SESSION['orderStatus'] == "confirmed" &
       xfbml      : true,     // parse page for xfbml or html5
                             // social plugins like login button below
       version    : 'v2.7',  // Specify an API version
+
     });
+      FB.AppEvents.logPageView();
   };
 
  // Load the SDK Asynchronously

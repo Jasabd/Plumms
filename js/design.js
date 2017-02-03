@@ -143,6 +143,10 @@ des.controller('MainController', ['$scope', '$rootScope', '$http', '$window', '$
             return resArr;
         };
 
+        var findInSelected = function(searchId) {
+
+        };
+
         var findConnectionElements = function(eitems) {
             var resArr = [];
             var prevItem;
@@ -174,6 +178,19 @@ des.controller('MainController', ['$scope', '$rootScope', '$http', '$window', '$
                     }
                 } else {
                     //for other levels find the options
+
+                    //if this element is a Terracotta element, check if it was previously selected.
+                    if(row.material == "1") {
+                        var findmatching = false;
+                        $.each($scope.mySelectedItems, function(elin, elval) {
+                                if(elval.id == row.id) {
+                                    findmatching = true;
+                                    return true;
+                                }
+                        });
+                        if(findmatching) return true;
+
+                    }
 
                     //if the prev element bottom point is only one, the options will all have only one top point
                     if(prevBottomPoints == 1 && prevElemCount == 1 ){
